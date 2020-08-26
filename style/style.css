@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+header {
+  background: #ececec;
+}
+
+header nav {
+  width: 1100px;
+  padding: 10px 0;
+  margin: auto;
+}
+
+header nav h1 {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+}
+
+header nav h1 span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+main {
+  background: #d0e9d0;
+  padding: 400px 0;
+  text-align: center;
+}
+
+main button {
+  padding: 20px 30px;
+  border: none;
+  color: #ffffff;
+  background: #513896;
+  border-radius: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main button:hover {
+  background: #412c69;
+}
+
+footer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: #e9e9e9;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.modal-container {
+  width: 640px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #c9fdf0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #616161;
+  letter-spacing: 1px;
+}
+
+form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+input, select, textarea {
+  border: none;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  grid-column: span 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.send {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.send button {
+  padding: 15px 30px;
+  border: none;
+  margin: 0 10px;
+  font-size: 16px;
+  background: #513896;
+  outline: none;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal-container {
+        width: 640px;
+        padding: 20px;
+        box-sizing: border-box;
+        background: rgb(201, 253, 240);
+      }
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #616161;
+        letter-spacing: 1px;
+      }
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+      input, select, textarea {
+        border: none;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      textarea{
+        grid-column: span 2;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .send{
+        grid-column: span 2;
+        text-align: center;
+      }
+      .send button{
+        padding: 15px 30px;
+        border: none;
+        margin: 0 10px;
+        font-size: 16px;
+        background: #513896;
+        outline: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal-container">
+
+      <p>Agregar Mascota</p>
+      <form action=""  class="inputs">
+        <input type="text" placeholder="Nombre" />
+        <input type="text" placeholder="Apellido" />
+        <input type="text" placeholder="Raza"/>
+        <input type="number" placeholder="Telefono"/>
+        <select name="country">
+          <option value=" ">País</option>
+          <option>Perú</option>
+          <option>Argentina</option>
+          <option>México</option>
+          <option>Brazil</option>
+          <option>Bolivia</option>
+        </select>
+        <input type="text" placeholder="Fotografía (url)"/>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Sobre él/ella"></textarea>
+        <div class="send">
+          <button>Aceptar</button>
+          <button>Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

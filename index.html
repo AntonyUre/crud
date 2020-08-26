@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <h1>Dog-<span>Crud</span></h1>
+        </nav>
+      </header>
+      <main>
+        <button id="crear" class="open-modal">Agregar mascota</button>
+      </main>
+
+      <!-- MODAL -->
+      <div class="modal-container">
+        <p>
+          Agregar Mascota
+          <button class="close-modal">
+            <img src="./img/close.png" alt="" />
+          </button>
+        </p>
+        <form action="" class="inputs">
+          <input type="text" placeholder="Nombre" />
+          <input type="text" placeholder="Apellido" />
+          <input type="text" placeholder="Raza" />
+          <input type="number" placeholder="Telefono" />
+          <select name="country">
+            <option value=" ">País</option>
+            <option>Perú</option>
+            <option>Argentina</option>
+            <option>México</option>
+            <option>Brazil</option>
+            <option>Bolivia</option>
+          </select>
+          <input type="text" placeholder="Fotografía (url)" />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Sobre él/ella"
+          ></textarea>
+          <div class="send">
+            <button>Aceptar</button>
+            <button>Cancelar</button>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <a href="#">All rigth &copy reserved</a>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
