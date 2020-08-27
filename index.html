@@ -15,7 +15,9 @@
     <div class="wrapper">
       <header>
         <nav>
-          <h1>Dog-<span>Crud <img src="./img/paw (1).png" alt="paw"></span></h1>
+          <h1>
+            Dog-<span>Crud <img src="./img/paw (1).png" alt="paw" /></span>
+          </h1>
         </nav>
       </header>
       <main>
@@ -23,39 +25,40 @@
       </main>
 
       <!-- MODAL -->
-      <div class="modal-container">
-        <p>
-          Agregar Mascota
-          <button class="close-modal">
-            <img src="./img/close.png" alt="" />
-          </button>
-        </p>
-        <form action="" class="inputs">
-          <input type="text" placeholder="Nombre" />
-          <input type="text" placeholder="Apellido" />
-          <input type="text" placeholder="Raza" />
-          <input type="number" placeholder="Telefono" />
-          <select name="country">
-            <option value=" ">País</option>
-            <option>Perú</option>
-            <option>Argentina</option>
-            <option>México</option>
-            <option>Brazil</option>
-            <option>Bolivia</option>
-          </select>
-          <input type="text" placeholder="Fotografía (url)" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Sobre él/ella"
-          ></textarea>
-          <div class="send">
-            <button>Aceptar</button>
-            <button>Cancelar</button>
-          </div>
-        </form>
+      <div class="windows-modal">
+        <div class="modal-container close">
+          <p>
+            Agregar Mascota
+            <button class="close-modal">X
+            </button>
+          </p>
+          <form action="" class="inputs">
+            <input type="text" placeholder="Nombre" />
+            <input type="text" placeholder="Apellido" />
+            <input type="text" placeholder="Raza" />
+            <input type="number" placeholder="Telefono" />
+            <select name="country">
+              <option value=" ">País</option>
+              <option>Perú</option>
+              <option>Argentina</option>
+              <option>México</option>
+              <option>Brazil</option>
+              <option>Bolivia</option>
+            </select>
+            <input type="text" placeholder="Fotografía (url)" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Sobre él/ella"
+            ></textarea>
+            <div class="send">
+              <button>Aceptar</button>
+              <button>Cancelar</button>
+            </div>
+          </form>
+        </div>
       </div>
 
       <footer>

@@ -3,6 +3,10 @@ body {
   height: 100vh;
 }
 
+.wrapper {
+  position: relative;
+}
+
 header {
   background: #ececec;
 }
@@ -15,7 +19,7 @@ header nav {
 
 header nav h1 {
   font-size: 40px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 header nav h1 span {
@@ -51,19 +55,60 @@ footer {
   background: #e9e9e9;
   padding: 20px 0;
   text-align: center;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 footer a {
   text-decoration: none;
 }
 
+.windows-modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .modal-container {
+  margin: auto;
   width: 640px;
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 20px;
   background: #c9fdf0;
+  position: relative;
+}
+
+.close-modal {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  background: red;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  outline: none;
 }
 
 p {
@@ -73,6 +118,7 @@ p {
   font-weight: bold;
   color: #616161;
   letter-spacing: 1px;
+  margin: 5px 0 20px 0;
 }
 
 form {
@@ -84,7 +130,9 @@ form {
   grid-row-gap: 20px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   border: none;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
