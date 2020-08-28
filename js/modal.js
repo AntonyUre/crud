@@ -1,30 +1,33 @@
-const cards = document.querySelector(".cards"); 
+const cards = document.querySelector(".cards");
 function Modal(element) {
   this.element = element;
   this.buttonClose = this.element.querySelector(".close-modal");
   this.buttonAccept = this.element.querySelector(".js_accept");
-  this.buttonCancel = this.element.querySelector(".js_cancel"); 
-  
+  this.buttonCancel = this.element.querySelector(".js_cancel");
 
-  this.buttonClose.onclick = ()=>{
-    this.close()
-  }
-  this.buttonCancel.onclick = ()=>{
-    this.close()
-  }
+  this.buttonClose.onclick = () => {
+    this.close();
+  };
+  this.buttonCancel.onclick = () => {
+    this.close();
+  };
 
-  this.buttonAccept.onclick = function(e){
+  this.buttonAccept.onclick = function (e) {
     e.preventDefault();
-     
-    const name = document.getElementById('name').value;
-    const lastname =document.getElementById('lastname').value;
-    const race =document.getElementById('race').value;
-    const phone =document.getElementById('phone').value;
-    const infoAditional =document.getElementById('textarea').value;
 
-    const card = document.createElement('div');
+    const name = document.getElementById("name").value;
+    const lastname = document.getElementById("lastname").value;
+    const race = document.getElementById("race").value;
+    const phone = document.getElementById("phone").value;
+    const infoAditional = document.getElementById("textarea").value;
+
+    const card = document.createElement("div");
 
     card.innerHTML = `
+    <div class="edit-delete">
+    <button> <img src="./img/edit.png" alt=""></button>
+    <button><img src="./img/delete.png" alt=""></button>
+  </div>
     <img src="./img/dog2.jpg" alt="texto entrada" />
             <div class="content">
               <h3> ${name}</h3>
@@ -36,31 +39,22 @@ function Modal(element) {
                 ${infoAditional}
               </p>
             </div>
-    `
+    `;
     console.log(cards);
-    cards.appendChild(card);  
+    cards.appendChild(card);
 
-
-   
-    console.log(name)
-
-  }
-   
-
-  
- 
-
+    console.log(name);
+  };
 }
 
-Modal.prototype.open = function(){
+Modal.prototype.open = function () {
   this.element.style.opacity = "1";
   this.element.style.visibility = "visible";
-}
-Modal.prototype.close = function(){
+};
+Modal.prototype.close = function () {
   this.element.style.opacity = "0";
   this.element.style.visibility = "hidden";
-
-}
+};
 
 /*
 Modal.prototype.close = function(){
