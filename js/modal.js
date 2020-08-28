@@ -22,14 +22,15 @@ function Modal(element) {
     const infoAditional = document.getElementById("textarea").value;
 
     const card = document.createElement("div");
+    card.classList.add('card');
 
     card.innerHTML = `
     <div class="edit-delete">
     <button> <img src="./img/edit.png" alt=""></button>
     <button><img src="./img/delete.png" alt=""></button>
   </div>
-    <img src="./img/dog2.jpg" alt="texto entrada" />
             <div class="content">
+            <img src="./img/dog2.jpg" alt="texto entrada" />
               <h3> ${name}</h3>
               <p>${lastname}</p>
               <span>|</span>
