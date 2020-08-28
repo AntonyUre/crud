@@ -140,26 +140,28 @@ textarea {
   color: #fff;
 }
 
-/*cards*/
 
-.section-cards{
+/*diseño cards*/
+.section-card{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .cards {
   margin-bottom: 1.5rem;
   display: flex;
-
+  font-family: Arial, Helvetica, sans-serif;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card {
+  background-color: #fff;
+  
   flex: 0 1 calc(33% - 2rem);
   border: 2px solid rebeccapurple;
   margin-bottom: 2rem;
@@ -207,9 +209,12 @@ h3 {
     }
   }
   p{
+    font-weight: 500;
+    font-size: 18px;
     margin-bottom: 0.5rem;
   }
   .more-information{
+   
     line-height: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
