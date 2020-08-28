@@ -1,4 +1,5 @@
-const cards = document.querySelector(".cards");
+import Card from './card.js'; 
+
 function Modal(element) {
   this.element = element;
   this.buttonClose = this.element.querySelector(".close-modal");
@@ -12,40 +13,14 @@ function Modal(element) {
     this.close();
   };
 
-  this.buttonAccept.onclick = function (e) {
+  this.buttonAccept.onclick = (e) => {
     e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const lastname = document.getElementById("lastname").value;
-    const race = document.getElementById("race").value;
-    const phone = document.getElementById("phone").value;
-    const infoAditional = document.getElementById("textarea").value;
-
-    const card = document.createElement("div");
-    card.classList.add('card');
-
-    card.innerHTML = `
-    <div class="edit-delete">
-    <button> <img src="./img/edit.png" alt=""></button>
-    <button><img src="./img/delete.png" alt=""></button>
-  </div>
-            <div class="content">
-            <img src="./img/dog2.jpg" alt="texto entrada" />
-              <h3> ${name}</h3>
-              <p>${lastname}</p>
-              <span>|</span>
-              <p>${race}</p>
-              <p>${phone}</p>
-              <p>
-                ${infoAditional}
-              </p>
-            </div>
-    `;
-    console.log(cards);
-    cards.appendChild(card);
-
-    console.log(name);
+    const card= new Card(this);
+  
+    this.close();
   };
+  
+ 
 }
 
 Modal.prototype.open = function () {
@@ -56,6 +31,8 @@ Modal.prototype.close = function () {
   this.element.style.opacity = "0";
   this.element.style.visibility = "hidden";
 };
+
+
 
 /*
 Modal.prototype.close = function(){
