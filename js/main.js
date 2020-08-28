@@ -1,12 +1,15 @@
 import Modal from './modal.js';
- const button = document.querySelector('.open-modal');
+ const buttonOpen = document.querySelector('.open-modal');
+ const buttonClose = document.querySelector('.js_cancel');
  const modal = new Modal(document.querySelector('.windows-modal'));
  console.log(button);
 // console.log(modal);
  
- button.onclick = function(){
+buttonOpen.onclick = function(){
    modal.open();
  }
+ 
+
 
 
 
