@@ -10,6 +10,11 @@ Modal.prototype.open = function(){
   this.element.style.visibility = "visible";
 
 }
+Modal.prototype.close = function(){
+  this.element.style.opacity = "0";
+  this.element.style.visibility = "hidden";
+
+}
 /*
 Modal.prototype.close = function(){
   this.containerModal.style.opacity = "0";
