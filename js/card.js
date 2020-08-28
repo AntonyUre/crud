@@ -10,7 +10,7 @@ function Card(modal) {
   card.innerHTML = `
     <div class="edit-delete">
     <button class="edit"> <img src="./img/edit.png" alt=""></button>
-    <button> <img src="./img/delete.png" alt=""></button>
+    <button class="delete"> <img src="./img/delete.png" alt=""></button>
   </div>
             <div class="content">
             <img src="./img/dog2.jpg" alt="texto entrada" />
@@ -31,6 +31,13 @@ function Card(modal) {
   editButton.onclick= ()=>{
     console.log('ppp');
     modal.open();
+  }
+
+  const deleteButton = card.querySelector(".delete");
+  
+  deleteButton.onclick= ()=>{
+    console.log('elimina');
+   // modal.open();
   }
 }
 
