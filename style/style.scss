@@ -68,6 +68,11 @@ footer {
   align-items: center;
   transition: 0.3s;
 }
+.is-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-container {
   margin: auto;
   width: 640px;
