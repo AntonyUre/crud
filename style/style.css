@@ -84,6 +84,11 @@ footer a {
   transition: 0.3s;
 }
 
+.is-modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-container {
   margin: auto;
   width: 640px;
@@ -158,5 +163,116 @@ textarea {
   background: #513896;
   outline: none;
   color: #fff;
+}
+
+/*cards*/
+.section-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cards {
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(33% - 2rem);
+          flex: 0 1 calc(33% - 2rem);
+  border: 2px solid rebeccapurple;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.card .edit-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .edit-delete button {
+  margin-top: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  border: none;
+}
+
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #4e9caa;
+  border-radius: 50%;
+  -webkit-box-shadow: -2px 4px 15px 4px #cfe6ec;
+          box-shadow: -2px 4px 15px 4px #cfe6ec;
+}
+
+.content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.content div span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content p {
+  margin-bottom: 0.5rem;
+}
+
+.content .more-information {
+  line-height: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 1rem);
+            flex: 0 1 calc(50% - 1rem);
+  }
 }
 /*# sourceMappingURL=style.css.map */

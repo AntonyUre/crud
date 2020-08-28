@@ -1,19 +1,18 @@
 import Modal from './modal.js';
  const button = document.querySelector('.open-modal');
  const modal = new Modal(document.querySelector('.windows-modal'));
- console.log(button);
+
 // console.log(modal);
  
  button.onclick = function(){
    modal.open();
  }
-
-
-
-
-
-
-
+ window.onclick = function (e) {
+  if (e.target == modal) {
+    modal.style.opacity = "0";
+    modal.style.visibility = "hidden";
+  }
+};
 
 
 
