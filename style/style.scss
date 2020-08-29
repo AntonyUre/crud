@@ -3,31 +3,35 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  background-color: $color-green;
 }
+  
+
 .wrapper {
   position: relative;
 }
+
 header {
-  background: $color-red;
+  background: $color-white;
   nav {
-    // width: 1100px;
-    padding: 10px 0;
-    margin: auto;
+    padding: 15px 0;
+    color: $color-green-two;
+    text-align: center;
     h1 {
-      font-size: 40px;
+      padding: 5px 10px;
+      font-size: 35px;
       font-family: "Pacifico", cursive;
-      span {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 35px;
-      }
+    }
+    i {
+      padding: 0 5px;
     }
   }
 }
 main {
-  background: $color-green;
-  padding: 400px 0;
+  padding: 20px 0;
   text-align: center;
+
+  // BOTON AGREGAR MASCOTAS
   button {
     padding: 20px 30px;
     border: none;
@@ -38,19 +42,11 @@ main {
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+    transition: 0.3s;
     &:hover {
+      transition: 0.3s;
       background: rgb(65, 44, 105);
     }
-  }
-}
-footer {
-  align-self: flex-end;
-  background: #e9e9e9;
-  padding: 20px 0;
-  text-align: center;
-  font-weight: bold;
-  a {
-    text-decoration: none;
   }
 }
 
@@ -72,6 +68,7 @@ footer {
   align-items: center;
   transition: 0.3s;
 }
+
 .modal-container {
   margin: auto;
   width: 640px;
@@ -87,7 +84,7 @@ footer {
   height: 35px;
   border: none;
   border-radius: 20px;
-  background: red;
+  background: $color-btn;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
@@ -96,6 +93,11 @@ footer {
   right: 5px;
   cursor: pointer;
   outline: none;
+  &:hover{
+    
+  background: $color-white;
+  color: $color-btn;
+  }
 }
 
 p {
@@ -121,6 +123,7 @@ form {
 input,
 select,
 textarea {
+  border-radius: 10px;
   border: none;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -143,12 +146,12 @@ textarea {
     margin: 5px 0;
   }
 }
-.div_file p{
+.div_file p {
   font-size: 12px;
   display: inline-block;
   font-weight: normal;
 }
-.div_file i{
+.div_file i {
   color: $color-green;
   margin-right: 5px;
 }
@@ -173,6 +176,7 @@ textarea {
 }
 .send .btn {
   padding: 15px 30px;
+  border-radius: 10px;
   border: none;
   margin: 0 10px;
   font-size: 16px;
@@ -182,5 +186,155 @@ textarea {
   @media (max-width: 600px) {
     width: 100%;
     margin: 5px 0;
+  }
+}
+
+/*diseño cards*/
+.section-cards {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.card {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  min-width: 250px;
+  height: 450px;
+  background-color: rgb(145, 206, 198);
+  color: #fff;
+  border-radius: 1rem;
+  transition: 0.3s;
+
+  // botones para editar y eliminar
+  .edit-delete {
+    display: flex;
+    justify-content: space-between;
+    button {
+      background: $color-btn;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-top: 5px;
+      margin-right: 5px;
+      margin-left: 5px;
+      border: none;
+      &:hover {
+        color: $color-btn;
+        background:#fff;
+        transition: 0.3s;
+      }
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+}
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  text-align: center;
+  img {
+    display: flex;
+    margin: 1rem auto;
+
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid rgb(78, 156, 170);
+    border-radius: 50%;
+    box-shadow: -2px 4px 15px 4px #cfe6ec;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    span {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .more-information {
+    line-height: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+/*modal diseño delete*/
+.modal-delete {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  .modal {
+    width: 640px;
+    // height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: rgb(201, 253, 240);
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #616161;
+    letter-spacing: 1px;
+  }
+
+  .send {
+    text-align: center;
+  }
+
+  .send button {
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    font-size: 16px;
+    background: #513896;
+    outline: none;
+    color: #fff;
   }
 }

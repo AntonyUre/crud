@@ -1,6 +1,8 @@
+@charset "UTF-8";
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  background-color: #d0e9d0;
 }
 
 .wrapper {
@@ -8,28 +10,27 @@ body {
 }
 
 header {
-  background: #ececec;
+  background: #ffffff;
 }
 
 header nav {
-  padding: 10px 0;
-  margin: auto;
+  padding: 15px 0;
+  color: #a7c2ae;
+  text-align: center;
 }
 
 header nav h1 {
-  font-size: 40px;
+  padding: 5px 10px;
+  font-size: 35px;
   font-family: "Pacifico", cursive;
 }
 
-header nav h1 span {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 35px;
+header nav i {
+  padding: 0 5px;
 }
 
 main {
-  background: #d0e9d0;
-  padding: 400px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -43,23 +44,14 @@ main button {
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main button:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: #412c69;
-}
-
-footer {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  background: #e9e9e9;
-  padding: 20px 0;
-  text-align: center;
-  font-weight: bold;
-}
-
-footer a {
-  text-decoration: none;
 }
 
 .windows-modal {
@@ -103,7 +95,7 @@ footer a {
   height: 35px;
   border: none;
   border-radius: 20px;
-  background: red;
+  background: #b19303;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
@@ -112,6 +104,11 @@ footer a {
   right: 5px;
   cursor: pointer;
   outline: none;
+}
+
+.close-modal:hover {
+  background: #ffffff;
+  color: #b19303;
 }
 
 p {
@@ -142,6 +139,7 @@ form {
 input,
 select,
 textarea {
+  border-radius: 10px;
   border: none;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -212,6 +210,7 @@ textarea {
 
 .send .btn {
   padding: 15px 30px;
+  border-radius: 10px;
   border: none;
   margin: 0 10px;
   font-size: 16px;
@@ -225,5 +224,192 @@ textarea {
     width: 100%;
     margin: 5px 0;
   }
+}
+
+/*diseño cards*/
+.section-cards {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.card {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  min-width: 250px;
+  height: 450px;
+  background-color: #91cec6;
+  color: #fff;
+  border-radius: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card .edit-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .edit-delete button {
+  background: #b19303;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: none;
+}
+
+.card .edit-delete button:hover {
+  color: #b19303;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card .edit-delete button i {
+  font-size: 16px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #4e9caa;
+  border-radius: 50%;
+  -webkit-box-shadow: -2px 4px 15px 4px #cfe6ec;
+          box-shadow: -2px 4px 15px 4px #cfe6ec;
+}
+
+.content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.content div span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content p {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content .more-information {
+  line-height: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 1rem);
+            flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+/*modal diseño delete*/
+.modal-delete {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal-delete .modal {
+  width: 640px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background: #c9fdf0;
+}
+
+.modal-delete p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #616161;
+  letter-spacing: 1px;
+}
+
+.modal-delete .send {
+  text-align: center;
+}
+
+.modal-delete .send button {
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  font-size: 16px;
+  background: #513896;
+  outline: none;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
