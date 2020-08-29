@@ -27,13 +27,11 @@ function Card(modal) {
   cards.appendChild(card);
 
   const editButton = card.querySelector(".edit");
-  
-  editButton.onclick= ()=>{
-    console.log('ppp');
+
+  editButton.onclick = () => {
+    console.log("ppp");
     modal.open();
-  }
+  };
 }
-
-
 
 export default Card;
