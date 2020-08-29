@@ -14,6 +14,7 @@ function Modal2(element, card) {
     e.preventDefault();
   
     card.remove();
+    this.close();
   };
   
  
