@@ -19,15 +19,16 @@ function Card(modal) {
     <button class="deleteOpen"> <img src="./img/delete.png" alt=""></button>
   </div>
             <div class="content">
-            <img src="./img/dog2.jpg" alt="texto entrada" />
-              <h3 class="name"> ${name.value} ${lastname.value}</h3>
+            <img src="https://placedog.net/640/480?random" alt="texto entrada" />
+              <h3 class="name"> ${name.value}</h3>
+              <h3 class="lastname"> ${lastname.value}</h3>
               <div>
-              <p>${race.value}</p>
+              <p class="race">${race.value}</p>
               <span>|</span>
-              <p>${country.value}</p>
+              <p class="country">${country.value}</p>
               </div>
-              <p>${phone.value}</p>
-              <p>
+              <p class="phone">${phone.value}</p>
+              <p class="textarea">
                 ${infoAditional.value}
               </p>
             </div>
@@ -41,14 +42,26 @@ function Card(modal) {
   const editButton = card.querySelector(".edit");
 
   editButton.onclick = () => {
-    const modal3 = new Modal3(document.querySelector(".windows-modal"));
+    const modal3 = new Modal3(document.querySelector(".windows-modal"), card);
+
+    
+    
+    const editName = card.querySelector(".name").innerHTML;
+    const editLastname = card.querySelector(".lastname").innerHTML;
+    const editRace = card.querySelector(".race").innerHTML;
+    const editCountry = card.querySelector(".country").innerHTML;
+    const editPhone = card.querySelector(".phone").innerHTML;
+    const editInfo = card.querySelector(".textarea").innerHTML;
+
+    modal3.asignar(editName, editLastname, editRace, editCountry, editPhone, editInfo);
+
+    console.log(card);
+
+    console.log("data car", editName, editRace, editCountry, editPhone,  editInfo);
+
+
     modal3.open();
 
-    const nane = document.querySelector(".name");
-
-    console.log(this.card);
-
-    console.log("data car", this.card.nane);
   };
 
   const deleteButton = card.querySelector(".deleteOpen");
