@@ -278,3 +278,9 @@ h3 {
     flex: 0 1 calc(50% - 1rem);
   }
 }
+ /*modal diseño delete*/
+
+ .modal-delete{
+  opacity: 0;
+  visibility: hidden;
+ }

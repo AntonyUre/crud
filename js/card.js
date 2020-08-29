@@ -1,4 +1,7 @@
+import Modal2 from './modal2.js';
+
 const cards = document.querySelector(".cards");
+
 function Card(modal) {
   const name = document.getElementById("name").value;
   const lastname = document.getElementById("lastname").value;
@@ -10,7 +13,7 @@ function Card(modal) {
   card.innerHTML = `
     <div class="edit-delete">
     <button class="edit"> <img src="./img/edit.png" alt=""></button>
-    <button class="delete"> <img src="./img/delete.png" alt=""></button>
+    <button class="deleteOpen"> <img src="./img/delete.png" alt=""></button>
   </div>
             <div class="content">
             <img src="./img/dog2.jpg" alt="texto entrada" />
@@ -33,11 +36,15 @@ function Card(modal) {
     modal.open();
   }
 
-  const deleteButton = card.querySelector(".delete");
+  const deleteButton = card.querySelector(".deleteOpen");
   
   deleteButton.onclick= ()=>{
     console.log('elimina');
-   // modal.open();
+    const modalDelete = new Modal2(document.querySelector('.modal-delete'), card);
+
+    modalDelete.open();
+
+
   }
 }
 

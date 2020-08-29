@@ -30,7 +30,7 @@ header nav h1 span {
 
 main {
   background: #d0e9d0;
-  padding: 20px 0;
+  padding: 400px 0;
   text-align: center;
 }
 
@@ -226,6 +226,13 @@ textarea {
   color: #fff;
 }
 
+@media (max-width: 600px) {
+  .send .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
 /*diseño cards*/
 .section-card {
   display: -webkit-box;
@@ -339,5 +346,11 @@ h3 {
         -ms-flex: 0 1 calc(50% - 1rem);
             flex: 0 1 calc(50% - 1rem);
   }
+}
+
+/*modal diseño delete*/
+.modal-delete {
+  opacity: 0;
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */
