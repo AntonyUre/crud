@@ -59,7 +59,6 @@ function Card(modal) {
 
     console.log("data car", editName, editRace, editCountry, editPhone,  editInfo);
 
-
     modal3.open();
 
   };
