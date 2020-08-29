@@ -1,10 +1,7 @@
-
-
 function Modal2(element, card) {
   this.element = element;
   this.buttonAccept = this.element.querySelector(".js_accept");
   this.buttonCancel = this.element.querySelector(".js_cancel");
-
 
   this.buttonCancel.onclick = () => {
     this.close();
@@ -12,12 +9,10 @@ function Modal2(element, card) {
 
   this.buttonAccept.onclick = (e) => {
     e.preventDefault();
-  
+
     card.remove();
     this.close();
   };
-  
- 
 }
 
 Modal2.prototype.open = function () {

@@ -144,12 +144,12 @@ textarea {
     margin: 5px 0;
   }
 }
-.div_file p{
+.div_file p {
   font-size: 12px;
   display: inline-block;
   font-weight: normal;
 }
-.div_file i{
+.div_file i {
   color: $color-green;
   margin-right: 5px;
 }
@@ -186,9 +186,8 @@ textarea {
   }
 }
 
-
 /*diseño cards*/
-.section-card{
+.section-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -205,17 +204,17 @@ textarea {
   justify-content: space-between;
 }
 
-.card{
+.card {
   background-color: #fff;
-  
+
   flex: 0 1 calc(33% - 2rem);
   border: 2px solid rebeccapurple;
   margin-bottom: 2rem;
   border-radius: 1rem;
-  .edit-delete{
+  .edit-delete {
     display: flex;
     justify-content: space-between;
-    button{
+    button {
       margin-top: 4px;
       margin-right: 3px;
       margin-left: 3px;
@@ -232,51 +231,46 @@ h3 {
 
 .content {
   text-align: center;
-  img{
-    
+  img {
     display: flex;
     margin: 1rem auto;
-    
+
     width: 200px;
     height: 200px;
     object-fit: cover;
     border: 1px solid rgb(78, 156, 170);
     border-radius: 50%;
     box-shadow: -2px 4px 15px 4px #cfe6ec;
-    
   }
-  div{
+  div {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    span{
+    span {
       margin-left: 10px;
       margin-right: 10px;
     }
   }
-  p{
+  p {
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 0.5rem;
   }
-  .more-information{
-   
+  .more-information {
     line-height: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    
   }
 }
-
 
 @media screen and (min-width: 480px) {
   .content {
     flex: 0 1 calc(50% - 1rem);
   }
 }
- /*modal diseño delete*/
+/*modal diseño delete*/
 
- .modal-delete{
+.modal-delete {
   opacity: 0;
   visibility: hidden;
   width: 100%;
@@ -292,14 +286,14 @@ h3 {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  .modal{
+  .modal {
     width: 640px;
     height: 250px;
     padding: 20px;
     box-sizing: border-box;
     background: rgb(201, 253, 240);
   }
-  p{
+  p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 24px;
@@ -308,10 +302,10 @@ h3 {
     letter-spacing: 1px;
   }
 
-  .send{
+  .send {
     text-align: center;
   }
-  .send button{
+  .send button {
     padding: 15px 30px;
     margin: 0 10px;
     border: none;
@@ -320,5 +314,4 @@ h3 {
     outline: none;
     color: #fff;
   }
-
- }
+}

@@ -1,4 +1,4 @@
-import Card from './card.js'; 
+import Card from "./card.js";
 
 function Modal(element) {
   this.element = element;
@@ -15,12 +15,10 @@ function Modal(element) {
 
   this.buttonAccept.onclick = (e) => {
     e.preventDefault();
-    const card= new Card(this);
-  
+    const card = new Card(this);
+
     this.close();
   };
-  
- 
 }
 
 Modal.prototype.open = function () {
@@ -31,8 +29,6 @@ Modal.prototype.close = function () {
   this.element.style.opacity = "0";
   this.element.style.visibility = "hidden";
 };
-
-
 
 /*
 Modal.prototype.close = function(){

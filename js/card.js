@@ -1,4 +1,4 @@
-import Modal2 from './modal2.js';
+import Modal2 from "./modal2.js";
 
 const cards = document.querySelector(".cards");
 
@@ -30,24 +30,23 @@ function Card(modal) {
   cards.appendChild(card);
 
   const editButton = card.querySelector(".edit");
-  
-  editButton.onclick= ()=>{
-    console.log('ppp');
+
+  editButton.onclick = () => {
+    console.log("ppp");
     modal.open();
-  }
+  };
 
   const deleteButton = card.querySelector(".deleteOpen");
-  
-  deleteButton.onclick= ()=>{
-    console.log('elimina');
-    const modalDelete = new Modal2(document.querySelector('.modal-delete'), card);
+
+  deleteButton.onclick = () => {
+    console.log("elimina");
+    const modalDelete = new Modal2(
+      document.querySelector(".modal-delete"),
+      card
+    );
 
     modalDelete.open();
-
-
-  }
+  };
 }
-
-
 
 export default Card;
