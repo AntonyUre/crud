@@ -2,7 +2,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
-  background: #d0e9d0;
+  background-color: #d0e9d0;
 }
 
 .wrapper {
@@ -10,23 +10,23 @@ body {
 }
 
 header {
-  background: #ececec;
+  background: #ffffff;
 }
 
 header nav {
-  padding: 10px 0;
-  margin: auto;
+  padding: 15px 0;
+  color: #a7c2ae;
+  text-align: center;
 }
 
 header nav h1 {
-  font-size: 40px;
+  padding: 5px 10px;
+  font-size: 35px;
   font-family: "Pacifico", cursive;
 }
 
-header nav h1 span {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 35px;
+header nav i {
+  padding: 0 5px;
 }
 
 main {
@@ -44,9 +44,13 @@ main button {
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main button:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: #412c69;
 }
 
@@ -91,7 +95,7 @@ main button:hover {
   height: 35px;
   border: none;
   border-radius: 20px;
-  background: red;
+  background: #b19303;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
@@ -100,6 +104,11 @@ main button:hover {
   right: 5px;
   cursor: pointer;
   outline: none;
+}
+
+.close-modal:hover {
+  background: #ffffff;
+  color: #b19303;
 }
 
 p {
@@ -130,6 +139,7 @@ form {
 input,
 select,
 textarea {
+  border-radius: 10px;
   border: none;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -200,6 +210,7 @@ textarea {
 
 .send .btn {
   padding: 15px 30px;
+  border-radius: 10px;
   border: none;
   margin: 0 10px;
   font-size: 16px;
@@ -216,41 +227,30 @@ textarea {
 }
 
 /*diseño cards*/
-.section-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.section-cards {
+  max-width: 1300px;
   width: 100%;
-  max-width: 1100px;
   margin: 0 auto;
 }
 
 .cards {
-  margin-bottom: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
 }
 
 .card {
-  background-color: #fff;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(33% - 2rem);
-          flex: 0 1 calc(33% - 2rem);
-  border: 2px solid rebeccapurple;
-  margin-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  min-width: 250px;
+  height: 450px;
+  background-color: #91cec6;
+  color: #fff;
   border-radius: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .card .edit-delete {
@@ -263,17 +263,40 @@ textarea {
 }
 
 .card .edit-delete button {
-  margin-top: 4px;
-  margin-right: 3px;
-  margin-left: 3px;
+  background: #b19303;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
   border: none;
 }
 
+.card .edit-delete button:hover {
+  color: #b19303;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card .edit-delete button i {
+  font-size: 16px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 h3 {
-  font-family: "Libre Baskerville", serif;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .content {
@@ -314,6 +337,8 @@ h3 {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 0.5rem;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .content .more-information {
@@ -358,10 +383,10 @@ h3 {
 
 .modal-delete .modal {
   width: 640px;
-  height: 250px;
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 20px;
   background: #c9fdf0;
 }
 

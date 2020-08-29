@@ -22,7 +22,8 @@
       <header>
         <nav>
           <h1>
-            Dog-<span>Crud <img src="./img/paw.png" alt="paw" /></span>
+            Dog-Crud
+            <i class="fas fa-paw"></i>
           </h1>
         </nav>
       </header>
@@ -38,11 +39,11 @@
             <button class="close-modal">X</button>
           </p>
           <form action="" class="inputs">
-            <input id="name" type="text" placeholder="Nombre" />
-            <input id="lastname" type="text" placeholder="Apellido" />
+            <input id="name" type="text" placeholder="Nombre" required/>
+            <input id="lastname" type="text" placeholder="Apellido"/>
             <input id="race" type="text" placeholder="Raza" />
             <input id="phone" type="number" placeholder="Telefono" />
-            <select name="country">
+            <select id="country" name="country">
               <option value=" ">País</option>
               <option>Perú</option>
               <option>Argentina</option>
@@ -50,12 +51,12 @@
               <option>Brasil</option>
               <option>Bolivia</option>
             </select>
-            <!-- <input type="text" placeholder="Fotografía (url)" /> -->
-            <div class="div_file">
+            <input type="text" placeholder="Fotografía (url)" />
+            <!-- <div class="div_file">
               <i class="fas fa-file-upload"></i>
               <p>Sube una foto de tu mascota</p>
               <input type="file" class="btn-file" />
-            </div>
+            </div> -->
             <textarea
               name=""
               id="textarea"
@@ -64,16 +65,17 @@
               placeholder="Sobre él/ella"
             ></textarea>
             <div class="send">
-              <button type="button" class="js_accept">Aceptar</button>
-              <button type="button" class="js_cancel">Cancelar</button>
+              <button type="button" class="js_accept btn">Aceptar</button>
+              <button type="button" class="js_cancel btn">Cancelar</button>
             </div>
           </form>
         </div>
       </div>
+      <!-- cards -->
       <section class="section-cards">
         <div class="cards"></div>
       </section>
-
+      <!-- modal delete -->
       <div class="modal-delete">
         <div class="modal">
           <p>Estas seguro que quieres eliminar a esta mascota?</p>
