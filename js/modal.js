@@ -15,7 +15,14 @@ function Modal(element) {
 
   this.buttonAccept.onclick = (e) => {
     e.preventDefault();
+
     const card = new Card(this);
+
+    card.name = "";
+    card.lastname = "";
+    card.race ="";
+    card.infoAditional = "";
+
 
     this.close();
   };
@@ -30,10 +37,5 @@ Modal.prototype.close = function () {
   this.element.style.visibility = "hidden";
 };
 
-/*
-Modal.prototype.close = function(){
-  this.containerModal.style.opacity = "0";
-  this.containerModal.style.visibility = "hidden";
-}*/
 
 export default Modal;

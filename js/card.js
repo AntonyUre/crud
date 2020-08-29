@@ -1,13 +1,14 @@
-import Modal2 from "./modal2.js";
+import Modal2 from './modal2.js';
+import Modal3 from './modal3.js';
 
 const cards = document.querySelector(".cards");
 
 function Card(modal) {
-  const name = document.getElementById("name").value;
-  const lastname = document.getElementById("lastname").value;
-  const race = document.getElementById("race").value;
-  const phone = document.getElementById("phone").value;
-  const infoAditional = document.getElementById("textarea").value;
+  const name = document.getElementById("name");
+  const lastname = document.getElementById("lastname");
+  const race = document.getElementById("race");
+  const phone = document.getElementById("phone");
+  const infoAditional = document.getElementById("textarea");
   const card = document.createElement("div");
   card.classList.add("card");
   card.innerHTML = `
@@ -17,36 +18,49 @@ function Card(modal) {
   </div>
             <div class="content">
             <img src="./img/dog2.jpg" alt="texto entrada" />
-              <h3> ${name}</h3>
-              <p>${lastname}</p>
+              <h3> ${name.value}</h3>
+              <p>${lastname.value}</p>
               <span>|</span>
-              <p>${race}</p>
-              <p>${phone}</p>
+              <p>${race.value}</p>
+              <p>${phone.value}</p>
               <p>
-                ${infoAditional}
+                ${infoAditional.value}
               </p>
             </div>
     `;
-  cards.appendChild(card);
+  
+    cards.appendChild(card);
+    name.value = "";
+    lastname.value = "";
+    race.value ="";
+    infoAditional.value = "";
+
+  //const position = [];
+
+
+  //position.push(cards.appendChild(card), i)
 
   const editButton = card.querySelector(".edit");
-
-  editButton.onclick = () => {
-    console.log("ppp");
-    modal.open();
-  };
+  
+  editButton.onclick= ()=>{
+    const modal3 = new Modal3(document.querySelector(".windows-modal"));
+    modal3.open(this.card);
+    console.log(this.card);
+  }
 
   const deleteButton = card.querySelector(".deleteOpen");
-
-  deleteButton.onclick = () => {
-    console.log("elimina");
-    const modalDelete = new Modal2(
-      document.querySelector(".modal-delete"),
-      card
-    );
+  
+  deleteButton.onclick= ()=>{
+    console.log('elimina');
+    const modalDelete = new Modal2(document.querySelector('.modal-delete'), card);
 
     modalDelete.open();
-  };
+
+
+  }
 }
+
+
+
 
 export default Card;
