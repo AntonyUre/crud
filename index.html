@@ -7,6 +7,12 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+      integrity="sha512-c93ifPoTvMdEJH/rKIcBx//AL1znq9+4/RmMGafI/vnTFe/dKwnn1uoeszE2zJBQTS1Ck5CqSBE+34ng2PthJg=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
     <title>CRUD</title>
@@ -29,8 +35,7 @@
         <div class="modal-container close">
           <p>
             Agregar Mascota
-            <button class="close-modal">X
-            </button>
+            <button class="close-modal">X</button>
           </p>
           <form action="" class="inputs">
             <input id="name" type="text" placeholder="Nombre" />
@@ -42,10 +47,15 @@
               <option>Perú</option>
               <option>Argentina</option>
               <option>México</option>
-              <option>Brazil</option>
+              <option>Brasil</option>
               <option>Bolivia</option>
             </select>
-            <input type="text" placeholder="Fotografía (url)" />
+            <!-- <input type="text" placeholder="Fotografía (url)" /> -->
+            <div class="div_file">
+              <i class="fas fa-file-upload"></i>
+              <p>Sube una foto de tu mascota</p>
+              <input type="file" class="btn-file" />
+            </div>
             <textarea
               name=""
               id="textarea"
@@ -61,15 +71,21 @@
         </div>
       </div>
       <section class="section-cards">
-        <div class="cards">
-        </div>
+        <div class="cards"></div>
       </section>
 
-    
+      <div class="modal-delete">
+        <div class="modal">
+          <p>Estas seguro que quieres eliminar a esta mascota?</p>
+          <div class="send">
+            <button class="js_accept">Aceptar</button>
+            <button class="js_cancel">Cancelar</button>
+          </div>
+        </div>
+      </div>
     </div>
-   
+
     <!--<script src="./js/main.js"></script> -->
     <script type="module" src="./js/main.js"></script>
-   
   </body>
 </html>

@@ -14,7 +14,6 @@ header {
 }
 
 header nav {
-  width: 1100px;
   padding: 10px 0;
   margin: auto;
 }
@@ -44,6 +43,7 @@ main button {
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 main button:hover {
@@ -57,8 +57,11 @@ main button:hover {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,11 +73,6 @@ main button:hover {
           align-items: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.is-modal-open {
-  opacity: 1;
-  visibility: visible;
 }
 
 .modal-container {
@@ -123,12 +121,69 @@ form {
   grid-row-gap: 20px;
 }
 
+@media (max-width: 600px) {
+  form {
+    display: block;
+  }
+}
+
 input,
 select,
 textarea {
   border: none;
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  input,
+  select,
+  textarea {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.div_file {
+  width: 100%;
+  height: 37px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: white;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .div_file {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.div_file p {
+  font-size: 12px;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.div_file i {
+  color: #d0e9d0;
+  margin-right: 5px;
+}
+
+.btn-file {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
 }
 
 textarea {
@@ -143,7 +198,7 @@ textarea {
   text-align: center;
 }
 
-.send button {
+.send .btn {
   padding: 15px 30px;
   border: none;
   margin: 0 10px;
@@ -151,6 +206,13 @@ textarea {
   background: #513896;
   outline: none;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .send .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
 
 /*diseño cards*/
@@ -266,5 +328,63 @@ h3 {
         -ms-flex: 0 1 calc(50% - 1rem);
             flex: 0 1 calc(50% - 1rem);
   }
+}
+
+/*modal diseño delete*/
+.modal-delete {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal-delete .modal {
+  width: 640px;
+  height: 250px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #c9fdf0;
+}
+
+.modal-delete p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #616161;
+  letter-spacing: 1px;
+}
+
+.modal-delete .send {
+  text-align: center;
+}
+
+.modal-delete .send button {
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  font-size: 16px;
+  background: #513896;
+  outline: none;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
